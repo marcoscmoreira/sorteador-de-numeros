@@ -1,0 +1,39 @@
+.container {
+   display: grid;
+   grid-template-areas: calc(2, 1fr);
+   grid-template-areas: 'info form';
+   gap: 6.75rem;
+
+   margin-top: 5.5625rem;
+}
+
+.text-info {
+   grid-area: "info";
+   width: 100%;
+}
+
+.form {
+   grid-area: "form";
+   width: 100%;
+}
+
+
+
+@media (width < 391px) {
+   
+   .container {
+      grid-template-areas:
+      'info'
+      'form'
+      'about';
+      
+      gap: 2.625rem;
+
+      margin-top: 2.5rem;
+   }
+
+   .about {
+      grid-area: "about";
+   }
+
+}

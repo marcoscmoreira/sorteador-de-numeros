@@ -1,0 +1,89 @@
+#text-info {
+
+   &.text-info article span {
+      text-transform: uppercase;
+      background: -webkit-linear-gradient(45deg, #C7C9CC 0%, #3D3D3D 100%);
+      font: var(--overline);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+   }
+
+   &.text-info article h1 {
+      width: 32.1875rem;
+
+      color: var(--content-primary);
+      font: var(--display-lg-eb);
+      letter-spacing: -4%;
+      text-transform: uppercase;
+
+      margin-bottom: 2.375rem;
+   }
+
+   /* Elemento que precede outro*/
+   &.text-info article div ~ div {
+      margin-top: 2.25rem;
+   }
+
+   & .about {
+      grid-area: "about";
+   }
+
+   & .about > div {
+      display: flex;
+      align-items: start;
+   }
+
+   & .about div > div {
+      margin-left: .5rem;
+   }
+
+   & .about > div > div span {
+      all: unset;
+      color: var(--content-brand);
+      font: var(--paragraph-md-md);
+   }
+
+   & .about > div > div p {
+
+      color: var(--content-secondary);
+      font: var(--paragraph-sm-md);
+      width: 22.375rem;
+   }
+
+}
+
+#form {
+   
+   &.form-info header {
+      margin-bottom: 2.5rem;
+   }
+
+   &.form-info header h2{
+      color: var(--content-primary);      
+      font: var(--label-md-b);
+      text-transform: uppercase;
+      margin-bottom: .125rem;
+   }
+
+   &.form-info header p {
+      color: var(--content-secondary);
+      font: var(--paragraph-lg-md);
+   }
+
+}
+
+@media (width < 391px) {
+   #text-info {
+
+      /* Alterar aqui depois para aparecer abaixo do form - layout.css */
+      & .about {
+         display: none;
+      }
+      
+      &.text-info article h1 {
+         width: 19.25rem;
+         font: var(--display-md-eb);
+      }
+   }
+
+}

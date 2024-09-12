@@ -25,7 +25,7 @@
    --gradient-border:  linear-gradient(91.26deg, #77C0AF 0%, #D1DC97 14.84%, #E9A9B3 32.15%, #D586E0 65.79%, #91A1FA 84.58%);
    --gradient-background: linear-gradient(91.26deg, #D586E0 0%, #91A1FA 98.93%);
    --gradient-content: linear-gradient(90deg, #C7C9CC 0%, #3D3D3D 100%);
-
+   
    /* Variáveis de fonte. */
    /* base font-family */
    --ff-sora: "Sora", sans-serif;
@@ -60,4 +60,22 @@ body {
 
 ul[role="list"] {
    list-style: none;
+}
+
+/* Mobile First */
+.wrapper-container {
+   max-width: 24.375rem;
+   margin: 0 auto;
+   padding-inline: 2.1875rem;
+}
+
+/* Full Screen */
+@media (width > 391px) {
+   
+   .wrapper-container {
+      max-width: 68.75rem; /* 1100px */
+      margin: 0 auto;
+      padding-inline: 0;
+   }
+   
 }
