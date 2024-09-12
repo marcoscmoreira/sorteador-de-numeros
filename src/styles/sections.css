@@ -4,7 +4,9 @@
       text-transform: uppercase;
       background: -webkit-linear-gradient(45deg, #C7C9CC 0%, #3D3D3D 100%);
       font: var(--overline);
+      
       -webkit-background-clip: text;
+      background-clip: text;
       -webkit-text-fill-color: transparent;
    }
 
