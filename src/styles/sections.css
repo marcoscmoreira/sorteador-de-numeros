@@ -2,9 +2,9 @@
 
    &.text-info article span {
       text-transform: uppercase;
-      background: -webkit-linear-gradient(45deg, #C7C9CC 0%, #3D3D3D 100%);
+      background: -webkit-linear-gradient(45deg, #c7c9cc 0%, #3d3d3d 100%);
       font: var(--overline);
-      
+
       -webkit-background-clip: text;
       background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -21,14 +21,10 @@
       margin-bottom: 2.375rem;
    }
 
-   /* Elemento que precede outro*/
-   &.text-info article div ~ div {
-      margin-top: 2.25rem;
-   }
+   
+}
 
-   & .about {
-      grid-area: "about";
-   }
+#about-lt {
 
    & .about > div {
       display: flex;
@@ -36,7 +32,7 @@
    }
 
    & .about div > div {
-      margin-left: .5rem;
+      margin-left: 0.5rem;
    }
 
    & .about > div > div span {
@@ -46,46 +42,45 @@
    }
 
    & .about > div > div p {
-
       color: var(--content-secondary);
       font: var(--paragraph-sm-md);
       width: 22.375rem;
    }
 
+   /* Elemento que precede outro*/
+   &.about article div ~ div {
+      margin-top: 2.25rem;
+   }
+
 }
 
-#form {
+#form-info {
    
+   grid-area: form-info;
+
    &.form-info header {
       margin-bottom: 2.5rem;
    }
 
-   &.form-info header h2{
-      color: var(--content-primary);      
+   &.form-info header h2 {
+      color: var(--content-primary);
       font: var(--label-md-b);
       text-transform: uppercase;
-      margin-bottom: .125rem;
+      margin-bottom: 0.125rem;
    }
 
    &.form-info header p {
       color: var(--content-secondary);
       font: var(--paragraph-lg-md);
    }
-
 }
 
 @media (width < 391px) {
    #text-info {
-
-      /* Alterar aqui depois para aparecer abaixo do form - layout.css */
-      & .about {
-         display: none;
-      }
       
       &.text-info article h1 {
          width: 19.25rem;
          font: var(--display-md-eb);
       }
    }
-
 }
