@@ -1,5 +1,5 @@
 .toggle {
-   -webkit-appearance: none;
+   appearance: none;
    position: relative;
    width: 1.875rem;
    height: 1.25rem;
