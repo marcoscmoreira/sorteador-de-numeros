@@ -14,13 +14,18 @@
 }
 
 .toggle-wrapper {
+   position: relative;
+
    display: flex;
    align-content: center;
-   
    
    row-gap: .75rem;
 
    margin-top: 1.25rem;
+
+   & label {
+      margin-left: .5rem;
+   }
 }
 
 .btn {
