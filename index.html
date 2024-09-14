@@ -33,7 +33,7 @@
             </article>
          </section>
 
-         <section id="about-lt" class="about-lt">
+         <section id="about-lt" class="about">
             <div class="about">
                <div>
                   <img src="src/assets/icons/person-talk.svg" alt="Ícone | Informação.">
@@ -62,11 +62,33 @@
                   rápido e fácil!</p>
             </header>
 
-            <form class="form-form">
-               
+            <form class="form">
+               <div class="form-wrapper">
 
+                  <div class="input-wrapper">
+                     <label class="label" for="number">Número</label>
+                     <input type="text" name="number" id="number">
+                  </div>
+
+                  <div class="input-wrapper">
+                     <label class="label" for="form">De</label>
+                     <input type="text" name="form" id="form">
+                  </div>
+
+                  <div class="input-wrapper">
+                     <label class="label" for="to">Até</label>
+                     <input type="text" name="to" id="to">
+                  </div>
+               </div>
+               <div class="toggle-wrapper toggle">
+                  <input type="checkbox" name="no-repeat" id="no-repeat">
+                  <label class="label" for="no-repeat">Não repetir número.</label>
+               </div>
+
+               <button type="submit" class="btn btn-primary">Sortear
+                  <img src="src/assets/icons/arrow-right.svg" alt="Ícone | Seta para direita.">
+               </button>
             </form>
-
 
          </aside>
 

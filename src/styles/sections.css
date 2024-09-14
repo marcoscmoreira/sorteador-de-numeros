@@ -48,14 +48,14 @@
    }
 
    /* Elemento que precede outro*/
-   &.about article div ~ div {
+   &.about div ~ div {
       margin-top: 2.25rem;
    }
 
 }
 
 #form-info {
-   
+
    grid-area: form-info;
 
    &.form-info header {
@@ -81,6 +81,12 @@
       &.text-info article h1 {
          width: 19.25rem;
          font: var(--display-md-eb);
+      }
+   }
+
+   #about-lt {
+      & .about > div > div p {
+         width: unset;
       }
    }
 }
