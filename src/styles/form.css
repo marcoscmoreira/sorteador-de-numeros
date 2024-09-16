@@ -1,7 +1,3 @@
-.form-none {
-   display: none;
-}
-
 .header-none {
    display: none;
 }
@@ -120,6 +116,10 @@
    display: flex;
    align-items: center;
    justify-content: center;
+}
+
+.form-info-none {
+   display: none;
 }
 
 .form-result-none {

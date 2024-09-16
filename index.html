@@ -58,31 +58,31 @@
          </section>
 
          <aside id="form-info" class="form-info">
-            <header>
+            <header id="header">
                <h2>Quero sortear: </h2>
                <p>Defina o intervalo e a quantidade de números, clique em "Sortear" e veja os resultados na tela. É
                   rápido e fácil!</p>
             </header>
 
-            <form class="form">
+            <form id="form" class="form">
                <div class="form-wrapper">
                   <div class="input-wrapper">
                      <label class="label" for="number">Número</label>
-                     <input type="text" name="number" id="number">
+                     <input type="number" required name="number" id="number">
                   </div>
 
                   <div class="input-wrapper">
-                     <label class="label" for="form">De</label>
-                     <input type="text" name="form" id="form">
+                     <label class="label" for="from">De</label>
+                     <input type="number" required name="from" id="from">
                   </div>
 
                   <div class="input-wrapper">
                      <label class="label" for="to">Até</label>
-                     <input type="text" name="to" id="to">
+                     <input type="number" required name="to" id="to">
                   </div>
                </div>
                <div class="toggle-wrapper">
-                  <input type="checkbox" checked class="toggle" name="no-repeat" id="no-repeat">
+                  <input type="checkbox" class="toggle" name="no-repeat" id="no-repeat">
                   <label class="label" for="no-repeat">Não repetir número.</label>
                </div>
                <button type="submit" class="btn btn-primary">Sortear
@@ -90,7 +90,7 @@
                </button>
             </form>
 
-            <!-- <form class="form-result">
+            <form id="form-result" class="form-result-none">
                <main class="container-result">
                   <header class="header">
                      <h1>Resultado do sorteio</h1>
@@ -109,7 +109,7 @@
                      <img src="src/assets/icons/arrow-again.svg" alt="Ícone | Sortear novamente.">
                   </button>
                </main>
-            </form> -->
+            </form>
 
          </aside>
 
@@ -117,7 +117,7 @@
 
 
    </div>
-
+   <script src="src/scripts/main.js"></script>
 </body>
 
 </html>
