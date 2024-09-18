@@ -24,3 +24,9 @@
 - Sortear números de acordo a quantidade e intervalos de números
   definidas pelo usuário.
 
+### Funcionalidades da aplicação
+
+- O usuário pode digitar quantos números quer sortear em um primeiro campo;
+- O usuário pode escolher um intervalo entre dois números para esse sorteio;
+- Ao sortear, os números devem aparecer de maneira animada na tela.
+
