@@ -165,8 +165,9 @@
 }
 
 .numbers-result {
-   display: flex;
-   flex-direction: row;
+   display: grid;
+   grid-template-columns: repeat(5, 1fr);
+   flex-wrap: wrap;
    justify-content: center;
    gap: 0.25rem;
    margin-block: 2.5rem;
@@ -190,6 +191,10 @@
 
    .btn-secondary {
       width: 100%;
+   }
+
+   .numbers-result {
+      grid-template-columns: repeat(3, 1fr);
    }
 }
 

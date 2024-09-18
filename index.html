@@ -82,7 +82,7 @@
                   </div>
                </div>
                <div class="toggle-wrapper">
-                  <input type="checkbox" class="toggle" name="no-repeat" id="no-repeat">
+                  <input type="checkbox" checked class="toggle" name="no-repeat" id="no-repeat">
                   <label class="label" for="no-repeat">Não repetir número.</label>
                </div>
                <button type="submit" class="btn btn-primary">Sortear
@@ -91,18 +91,18 @@
             </form>
 
             <form id="form-result" class="form-result-none">
-               <main class="container-result">
+               <main id="main-result" class="container-result">
                   <header class="header">
                      <h1>Resultado do sorteio</h1>
                      <span>1º resultado</span>
                   </header>
-                  <article class="numbers-result">
-                     <div class="square">
+                  <article id="article" class="numbers-result">
+                     <!-- <div class="square">
                         <h1>23</h1>
                      </div>
                      <div class="square">
                         <h1>12</h1>
-                     </div>
+                     </div> -->
                   </article>
                   <button type="submit" class="btn btn-secondary">
                      Sortear novamente

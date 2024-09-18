@@ -23,6 +23,21 @@ formInfo.onsubmit = (event) => {
     toNumber.value
     // isRepeatable.value
   );
+
+  hideFormEntry();
+  showFormResult();
+};
+
+// Re-sorteia os números quando solicitado pelo usuário.
+formResult.onsubmit = (event) => {
+  event.preventDefault();
+
+  getRandomNumbers(
+    qtdNumber.value,
+    fromNumber.value,
+    toNumber.value
+    // isRepeatable.value
+  );
 };
 
 // Função responsável por randomizar os valores.
@@ -47,7 +62,6 @@ function verifyEntry(qtd, min, max) {
 function hideFormEntry() {
   const hideHeader = document.getElementById("header");
   hideHeader.classList.add("header-none");
-
   formInfo.classList.add("form-info-none");
 }
 
@@ -58,9 +72,8 @@ function showFormResult() {
 }
 
 // Função recebe e sorteia os valores.
-function getRandomNumbers(qtdRepeat, min, max, isRepeatable) {
+function getRandomNumbers(qtdRepeat, min, max) {
   try {
-    // const isRepeatable = isRepeatable; // Recupera se pode repetir os valores sorteados.
     const nRepeat = qtdRepeat; // Recupera a qtd de vezes para sortear.
     const fromNumber = Math.ceil(min); // Recupera o valor mínimo.
     const toNumber = Math.floor(max); // Recupera o valor máximo.
@@ -79,20 +92,39 @@ function getRandomNumbers(qtdRepeat, min, max, isRepeatable) {
 
     // Verifica se número sorteado é igual quando solicitado pelo usuário.
     const arrayUnico = new Set(resultRandom);
-
+    
     // Verifica se tamanho é igual ao array original. Se não sorteia novamente.
     if (arrayUnico.size === resultRandom.length) {
       // Retorna o array sem números repetidos.
-      console.log(arrayUnico);
-      // Chama função para esconder formulário.
-      hideFormEntry();
-      showFormResult();
-      return arrayUnico;
+      displayResults(arrayUnico);
     } else {
-      getRandomNumbers();
+      getRandomNumbers(nRepeat, fromNumber, toNumber);
     }
   } catch (error) {
     console.log(error);
     alert("Não foi possível sortear!. Tente novamente.");
+    // Recarrega a página se o alerta for apresentado.
+    window.location.reload();
   }
+}
+
+// Constrói os elementos e apresenta na tela.
+async function displayResults(resultArray) {
+  const resultList = document.getElementById("article");
+  resultList.innerHTML = "";
+
+  await resultArray.forEach((numbers) => {
+    const divItem = document.createElement("div");
+    divItem.classList.add("square");
+
+    const h1Item = document.createElement("h1");
+    h1Item.textContent = numbers;
+
+    divItem.appendChild(h1Item);
+
+    // Seta um tempo para apresentar o item na tela.
+    setTimeout(() => {
+      resultList.appendChild(divItem);
+    }, 1000);
+  });
 }
